@@ -4,6 +4,8 @@ const input = 30;
 
 const panelNum =  input * input;
 
+
+
 function addSquare() {
     for(let i = 1; i <= panelNum; i++){
         const panel = document.createElement("div");
@@ -14,6 +16,14 @@ function addSquare() {
         panel.style.backgroundColor = 'black';
         });
     };
+
+    const clearBtn = document.getElementById('clearBtn');
+    clearBtn.addEventListener('click', function(){
+        container.childNodes.forEach((child) => {
+            child.style.backgroundColor = 'white';
+          });
+      
+    })
 
 };
 addSquare();
