@@ -1,11 +1,13 @@
 #container {
     display:flex;
     flex-wrap: wrap;
-    height: 800px;
-    width: 800px;
+    height: 400px;
+    width: 400px;
     background-color: blueviolet;
 }
 
 .panel{
     background-color: green;
+    border: 0.1px solid black;
+    box-sizing: border-box;
 }
