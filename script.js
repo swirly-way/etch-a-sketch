@@ -1,6 +1,6 @@
 const container = document.getElementById('container');
 
-const input = 64;
+const input = 30;
 
 const panelNum =  input * input;
 
@@ -10,6 +10,9 @@ function addSquare() {
         panel.classList.add('panel');
         container.appendChild(panel);
         panel.style.flexBasis = `calc(100% / ${input})`;
+        panel.addEventListener('mouseover', function(){
+        panel.style.backgroundColor = 'black';
+        });
     };
 
 };
@@ -17,5 +20,3 @@ addSquare();
 
 
 
-//panel.addEventListener('mouseover', function(){
-//    panel.style.backgroundColor = 'white';
