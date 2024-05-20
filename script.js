@@ -31,8 +31,10 @@ function generateScreen() {
 
     const changeBtn = document.getElementById('changeBtn');
     changeBtn.addEventListener('click', function(){
+        input = prompt('How many squares per side?');
         while (container.firstChild) {
             container.removeChild(container.lastChild);
+            gridGenerator();
           }
     })
 };
