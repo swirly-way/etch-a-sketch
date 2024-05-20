@@ -8,7 +8,7 @@ const panelNum =  input * input;
 
 function generateScreen() {
 
-
+   const gridGenerator = function(){
     for(let i = 1; i <= panelNum; i++){
         const panel = document.createElement("div");
         panel.classList.add('panel');
@@ -18,6 +18,7 @@ function generateScreen() {
         panel.style.backgroundColor = 'black';
         });
     };
+}
 
     const clearBtn = document.getElementById('clearBtn');
     clearBtn.addEventListener('click', function(){
@@ -35,7 +36,7 @@ function generateScreen() {
           }
     })
 };
-addSquare();
+generateScreen();
 
 
 
