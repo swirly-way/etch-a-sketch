@@ -6,7 +6,9 @@ const panelNum =  input * input;
 
 
 
-function addSquare() {
+function generateScreen() {
+
+
     for(let i = 1; i <= panelNum; i++){
         const panel = document.createElement("div");
         panel.classList.add('panel');
@@ -24,7 +26,14 @@ function addSquare() {
           });
       
     })
+   
 
+    const changeBtn = document.getElementById('changeBtn');
+    changeBtn.addEventListener('click', function(){
+        while (container.firstChild) {
+            container.removeChild(container.lastChild);
+          }
+    })
 };
 addSquare();
 
