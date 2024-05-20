@@ -1,24 +1,24 @@
 const container = document.getElementById('container');
 
-const input = 30;
-
-const panelNum =  input * input;
-
+let input = prompt('How many squares per side?');
+let inputInt = Number(input);
+let panelNum =  inputInt * inputInt;
 
 
 function generateScreen() {
 
-   const gridGenerator = function(){
+   function gridGenerator(){
     for(let i = 1; i <= panelNum; i++){
         const panel = document.createElement("div");
         panel.classList.add('panel');
         container.appendChild(panel);
-        panel.style.flexBasis = `calc(100% / ${input})`;
+        panel.style.flexBasis = `calc(100% / ${inputInt})`;
         panel.addEventListener('mouseover', function(){
         panel.style.backgroundColor = 'black';
         });
     };
 }
+gridGenerator();
 
     const clearBtn = document.getElementById('clearBtn');
     clearBtn.addEventListener('click', function(){
@@ -31,11 +31,11 @@ function generateScreen() {
 
     const changeBtn = document.getElementById('changeBtn');
     changeBtn.addEventListener('click', function(){
+        container.replaceChildren();
         input = prompt('How many squares per side?');
-        while (container.firstChild) {
-            container.removeChild(container.lastChild);
-            gridGenerator();
-          }
+        inputInt = Number(input);
+        panelNum =  inputInt * inputInt;
+          gridGenerator();
     })
 };
 generateScreen();
