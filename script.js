@@ -11,8 +11,14 @@ function generateScreen() {
     for(let i = 1; i <= panelNum; i++){
         const panel = document.createElement("div");
         panel.addEventListener('mouseover', function(){
-            panel.style.backgroundColor = 'black';
-            });
+            if(randomOn === true){
+                const color = Math.floor(Math.random()*16777215).toString(16);
+                panel.style.backgroundColor = `#${color}`;
+               }
+               else{
+                panel.style.backgroundColor = 'black';
+               }
+                });
         panel.classList.add('panel');
         container.appendChild(panel);
         panel.style.flexBasis = `calc(100% / ${inputInt})`;
