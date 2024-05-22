@@ -37,6 +37,17 @@ gridGenerator();
         panelNum =  inputInt * inputInt;
           gridGenerator();
     })
+
+    const randomBtn = document.getElementById('randomBtn');
+randomBtn.addEventListener('click', function(){
+    if(randomOn === true){
+        randomOn = false;
+    }
+    else{
+        randomOn = true;
+    }
+})
+
 };
 generateScreen();
 
