@@ -1,11 +1,22 @@
 const container = document.getElementById('container');
 
-let input = prompt('How many squares per side?');
-let inputInt = Number(input);
-let panelNum =  inputInt * inputInt;
+let input, inputInt, panelNum
 let randomOn = false;
 
+
 function generateScreen() {
+
+    function requestInput(){
+        input = prompt('How many squares per side? (Max 100)');
+        inputInt = Number(input);
+        panelNum =  inputInt * inputInt;
+        if(inputInt >= 101){
+            requestInput();
+        }
+    
+    }
+    requestInput();
+
 
    function gridGenerator(){
     for(let i = 1; i <= panelNum; i++){
@@ -38,9 +49,7 @@ gridGenerator();
     const changeBtn = document.getElementById('changeBtn');
     changeBtn.addEventListener('click', function(){
         container.replaceChildren();
-        input = prompt('How many squares per side?');
-        inputInt = Number(input);
-        panelNum =  inputInt * inputInt;
+          requestInput();
           gridGenerator();
     })
 
