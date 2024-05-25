@@ -26,7 +26,28 @@ h1{
     display: flex;
 }
 
+.frame-right{
+    display: flex;
+}
 
+#buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+#clearBtn, #changeBtn, #randomBtn{
+    background-color: #092047;
+  color: white;
+  border: none;
+  padding: 2px;
+  font-size: 13px;
+  height: 60px;
+  width: 60px;
+  box-shadow: 0 2px 4px darkslategray;
+  border-radius: 50%;
+}
 
 #container {
     display:flex;
