@@ -13,6 +13,8 @@ body{
 
 
 h1{
+    margin: 0 auto;
+    width: 50%;
         border: 2px solid #ff2a6d;
      background-color: #092047;
         padding: 10px;
@@ -81,6 +83,8 @@ h1{
 }
 
 #footer{
+    margin: 0 auto;
+    width: 50%;
     border: 2px solid #ff2a6d;
     background-color: #092047;
     padding: 10px;
