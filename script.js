@@ -1,6 +1,6 @@
 const container = document.getElementById('container');
 
-let input = //prompt('How many squares per side?');
+let input = prompt('How many squares per side?');
 let inputInt = Number(input);
 let panelNum =  inputInt * inputInt;
 let randomOn = false;
@@ -38,7 +38,7 @@ gridGenerator();
     const changeBtn = document.getElementById('changeBtn');
     changeBtn.addEventListener('click', function(){
         container.replaceChildren();
-        input = //prompt('How many squares per side?');
+        input = prompt('How many squares per side?');
         inputInt = Number(input);
         panelNum =  inputInt * inputInt;
           gridGenerator();
