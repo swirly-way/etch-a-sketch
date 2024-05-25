@@ -1,9 +1,9 @@
-* {
-    outline: 1px solid rgb(0, 119, 255);
-  }
-
 body{
     background-color: #092047;
+    height:95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @font-face {
@@ -76,6 +76,17 @@ h1{
     background-color: white;
     border: 0.1px solid black;
     box-sizing: border-box;
+}
+
+#footer{
+    border: 2px solid #ff2a6d;
+    background-color: #092047;
+        border-right-width: 15px;
+        font-family: "Pixel Emulator";
+        font-size: 1em;
+        color: #d1f7ff;
+        text-shadow: 3px 3px 3px rgba(5, 217, 232, 1);
+        text-align: center;
 }
 
 
